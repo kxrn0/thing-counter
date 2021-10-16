@@ -1,8 +1,11 @@
 const things = document.getElementById("things");
 const THINGS = "_array_of_things_to_come_";
 
+//I need to refactor the code to make it work with JSON objects instead of arrays.
+//Fuck that.
+
 let data = localStorage.getItem(THINGS);
-let thingData = data ? Array.from(JSON.stringify(data)) : [];
+let thingData = data ? Array.from(JSON.parse(data)) : [];
 for (let i = 0; i < thingData.length; i++) {
     let thing = document.createElement('div');
     thing.innerHTML = `
@@ -13,7 +16,7 @@ for (let i = 0; i < thingData.length; i++) {
     <button class="remove-thing" data-remove="${thingData[i].id}">remove</button>
     `;
     thing.classList.add("thing");
-    things.appendChild(thing);
+    things.appendChild(thing);SON.stringify(
 }
 
 const inputField = document.getElementById("input-thing");
