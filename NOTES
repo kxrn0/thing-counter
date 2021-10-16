@@ -1,0 +1,2 @@
+I want to build a thing counter, so that I will be able to keep track of things from the browser.
+The app will store the count in the browser local storage, and the user will be able to update the count.

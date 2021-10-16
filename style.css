@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(243, 234, 234);
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#add-thing {
+    margin: 50px;
+    padding: 50px;
+}
+
+#add-button, #input-thing {
+    padding: 10px;
+    margin: 5px;
+}
+
+#add-button {
+    width: 45px;
+    height: 45px;
+}
+
+#add-button:hover {
+    background-color: azure;
+}
+
+#add-button:active {
+    background-color: rgb(230, 212, 212);
+}
+
+.thing {
+    background-color: rgb(228, 215, 200);
+    padding: 25px;
+    margin: 10px;
+    /* display: flex; */
+}
+
+.thing-p {
+    display: inline-block;
+    width: 200px;
+    overflow: scroll;
+    background-color: rgb(243, 228, 207);
+    font-size: 19px;
+
+    /* coom */
+    scrollbar-width: none;
+    /* coom */
+}
+
+.thing-p::-webkit-scrollbar {
+    display: none;
+}
+
+.button-thing {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.remove-thing {
+    padding: 10px;
+    margin: 5px;
+}
+
+.remove-thing {
+    background-color: rgb(226, 224, 103);
+}
+
+/* .thing {
+    padding: 20px;
+    background-color: rgb(223, 207, 187);
+}
+
+.thing > p {
+    background-color: rgb(233, 217, 207);
+    padding: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    overflow:unset;
+}
+
+.thing > button {
+    padding: 15px;
+} */
