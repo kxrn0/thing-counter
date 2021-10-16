@@ -1,7 +1,7 @@
 const inputField = document.getElementById("input-thing");
 const inputButton = document.getElementById("add-button");
 const things = document.getElementById("things");
-let thingCount = [];
+let thingData = [];
 let id = 0;
 
 inputButton.addEventListener("click", () => {
@@ -19,33 +19,30 @@ inputButton.addEventListener("click", () => {
         `;
         thing.classList.add("thing");
         things.appendChild(thing);
-        thingCount.push(0);
+        thingData.push({ input, id, count: 0 });
         id++;
     }
 });
 
 things.addEventListener("click", event => {
-    let child, parent, id;
+    let parent, child, id;
+
     if (event.target.classList.contains("remove-thing")) {
-        let parent;
         id = event.path[0].dataset.remove;
         parent = document.querySelector(`[data-remove='${id}']`).parentNode.parentNode;
         child = document.querySelector(`[data-remove='${id}']`).parentNode;
         parent.removeChild(child);
+        thingData = thingData.filter(thg => thg.id != id);
     }
     else if (event.target.classList.contains("button-thing")) {
         let operation = event.path[0].dataset.add ? '+' : '-';
-        if (operation == '+') {
-            id = event.path[0].dataset.add;
-            parent = document.querySelector(`[data-add='${id}']`).parentNode.parentNode;
-            thingCount[id]++;
-        }
-        else {
-            id = event.path[0].dataset.subs;
-            parent = document.querySelector(`[data-subs='${id}']`).parentNode.parentNode;
-            thingCount[id]--;
-        }
+
+        id = operation == '+' ? event.path[0].dataset.add : event.path[0].dataset.subs;
+        parent = document.querySelector(`[data-${operation == '+' ? "add" : "subs"}='${id}']`).parentNode.parentNode;
+        let index = thingData.findIndex(thg => (thg.id == id));
+        thingData[index].count += operation == '+' ? 1 : -1;
+
         let span = Array.from(parent.getElementsByTagName("span"));
-        span[id].innerText = thingCount[id];
+        span[index].innerText = thingData[index].count;
     }
 });
