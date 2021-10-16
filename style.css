@@ -6,16 +6,19 @@
 }
 
 body {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
 #add-thing {
+    /* text-align: center; */
+    font-size: 23px;
     margin: 50px;
-    padding: 50px;
+    padding: 5% 15%;
 }
 
 #add-button, #input-thing {
+    font-size: 20px;
     padding: 10px;
     margin: 5px;
 }
