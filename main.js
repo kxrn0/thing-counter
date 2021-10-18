@@ -6,7 +6,7 @@ let thingData = data ? JSON.parse(data) : [];
 for (let i = 0; i < thingData.length; i++) {
     let thing = document.createElement('div');
     thing.innerHTML = `
-    <p class="thing-p">${thingData[i].input}</p>
+    <p class="thing-para">${thingData[i].input}</p>
     <button class="button-thing" data-add="${thingData[i].id}">+</button>
     <span>${thingData[i].count}</span>
     <button class="button-thing" data-subs="${thingData[i].id}">-</button>
@@ -27,7 +27,7 @@ inputButton.addEventListener("click", () => {
         inputField.value = '';
         let thing = document.createElement('div');
         thing.innerHTML = `
-        <p class="thing-p">${input}</p>
+        <p class="thing-para">${input}</p>
         <button class="button-thing" data-add="${id}">+</button>
         <span>0</span>
         <button class="button-thing" data-subs="${id}">-</button>
