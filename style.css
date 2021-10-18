@@ -85,7 +85,7 @@ body {
 }
 
 body {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -145,7 +145,7 @@ body {
 
 .remove-thing {
     position: relative;
-    left: 15%;
+    left: 25%;
     background-color: rgb(226, 224, 103);
 }
 
