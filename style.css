@@ -6,7 +6,7 @@
 }
 
 body {
-    width: 50%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -31,7 +31,8 @@ body {
 }
 
 #input-thing {
-    padding: 10px;
+    padding: 1%;
+    width: 50%;
 }
 
 #add-button {
@@ -46,6 +47,7 @@ body {
     margin: 20px auto;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 } 
 
 .thing-para, .button-thing, .remove-thing {
@@ -65,8 +67,7 @@ body {
 }
 
 .remove-thing {
-    position: relative;
-    left: 25%;
+    margin-left: auto;
     background-color: rgb(226, 224, 103);
 }
 
